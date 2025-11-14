@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #1e90ff, #00bfff);
+        display: grid;
+        place-items: center;
+    }
+
+    form {
+        background-color: white;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        width: 400px;
+        display: grid;
+        grid-template-columns: 150px 1fr; 
+        gap: 15px 10px; 
+        align-items: center;
+    }
+
+    h2 {
+        grid-column: 1 / span 2;
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 16px;
+        
+    }
+</style>
+</head>
+<body bgcolor="blue">
+  
+  <form action="ReservationServlet" method="post">
+  <h2>Reservation Form</h2>
+    Name: <input type="text" name="name">
+    Train No: <input type="text" name="train_no">
+    Train Name: <input type="text" name="train_name">
+    Class Type: <input type="text" name="class_type">
+    Date of Journey: <input type="date" name="doj">
+    From: <input type="text" name="from_place">
+    To: <input type="text" name="to_place"><br><br>
+    
+    <input type="submit" value="Book Ticket">
+  </form>
+</body>
+</html>
